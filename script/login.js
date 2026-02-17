@@ -12,6 +12,9 @@ document.getElementById("login-btn").addEventListener("click", function () {
   if (contactNumber === "01741902012" && pin === "1234") {
     // 03.1. true ::> alert > homepage
     alert("Login Success");
+
+    // window.location.replace("/home.html");
+    window.location.assign("../home.html");
   } else {
     // 03.2. false ::> alert > return
     alert("Login Failed");
