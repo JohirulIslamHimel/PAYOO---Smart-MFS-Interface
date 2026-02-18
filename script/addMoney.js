@@ -27,6 +27,21 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
         ${bankAccount} 
         at ${new Date()}`);
     setBalance(newBalance);
+
+    // 01.Hold history-container
+    const history = document.getElementById("history-container");
+    // 02. New div create
+    const newHistory = document.createElement("div");
+    // 03.Add innerHTML in new div
+    newHistory.innerHTML = `
+    <div class="transaction-card p-5 bg-base-100">
+    Add money success from 
+        ${bankAccount} , acc-no ${accNo} at ${new Date()}
+    </div>
+
+`;
+    // 04. New div append in history-container
+    history.append(newHistory);
   } else {
     alert("Invalid pin");
     return;
